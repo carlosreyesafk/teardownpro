@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeardownPro — Landing page teardowns for SaaS founders</title>
+<meta name="description" content="A productized landing page teardown for SaaS: written report + video walkthrough, delivered in 48 hours. $149 single / $399 pack of 3.">
+<style>
+  :root{--bg:#0b0f14;--card:#121923;--line:#1f2a38;--txt:#e8eef5;--mut:#93a3b5;--acc:#ff5c39;--acc2:#ffb03a;--ok:#39d98a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+  .logo{font-weight:800;font-size:22px;letter-spacing:-.5px}
+  .logo span{color:var(--acc)}
+  .btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:14px 30px;border-radius:10px;text-decoration:none;font-size:17px;transition:.15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,92,57,.35)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+  .hero{padding:80px 0 60px;text-align:center}
+  .hero .kicker{display:inline-block;background:#1a2534;border:1px solid var(--line);color:var(--acc2);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:99px;margin-bottom:24px}
+  h1{font-size:clamp(34px,5vw,58px);line-height:1.12;letter-spacing:-1.5px;margin-bottom:20px}
+  h1 em{font-style:normal;color:var(--acc)}
+  .sub{color:var(--mut);font-size:19px;max-width:680px;margin:0 auto 36px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+  .micro{color:var(--mut);font-size:14px}
+  .micro b{color:var(--ok)}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  h2{font-size:32px;letter-spacing:-.8px;margin-bottom:8px}
+  h2 .n{color:var(--acc)}
+  .lede{color:var(--mut);margin-bottom:32px;max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .card h3{font-size:18px;margin-bottom:10px}
+  .card h3 .e{margin-right:8px}
+  .card p,.card li{color:var(--mut);font-size:15px}
+  .card ul{list-style:none}
+  .card li{margin-bottom:8px;padding-left:22px;position:relative}
+  .card li::before{content:"✓";color:var(--ok);position:absolute;left:0;font-weight:700}
+  .teardown{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px;margin-bottom:28px}
+  .teardown .t-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+  .teardown .t-head h3{font-size:23px}
+  .teardown .t-url{color:var(--mut);font-size:14px;margin-bottom:18px}
+  .teardown .t-url a{color:var(--acc2);text-decoration:none}
+  .scores{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+  .score{background:#0d141d;border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:14px}
+  .score b{color:var(--acc2)}
+  .finding{margin-bottom:14px;padding:14px 16px;background:#0d141d;border-left:3px solid var(--acc);border-radius:0 8px 8px 0}
+  .finding h4{font-size:15.5px;margin-bottom:4px}
+  .finding p{color:var(--mut);font-size:14.5px}
+  .fix{border-left-color:var(--ok)}
+  .note{font-size:13px;color:var(--mut);border-top:1px dashed var(--line);padding-top:14px;margin-top:6px}
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:8px}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px 30px;text-align:center;position:relative}
+  .price.hot{border:2px solid var(--acc);transform:scale(1.03)}
+  .price .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--acc);color:#fff;font-size:12px;font-weight:800;letter-spacing:1px;padding:5px 16px;border-radius:99px;text-transform:uppercase}
+  .price .amount{font-size:52px;font-weight:800;letter-spacing:-2px;margin:10px 0 4px}
+  .price .per{color:var(--mut);font-size:14px;margin-bottom:22px}
+  .price ul{list-style:none;text-align:left;margin-bottom:28px}
+  .price li{color:var(--mut);font-size:15px;margin-bottom:10px;padding-left:24px;position:relative}
+  .price li::before{content:"→";color:var(--acc);position:absolute;left:0;font-weight:700}
+  .faq-item{margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px}
+  .faq-item h4{font-size:16.5px;margin-bottom:6px}
+  .faq-item p{color:var(--mut);font-size:15px}
+  .pay{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px}
+  .pay h3{margin-bottom:14px}
+  .pay .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+  .pay .box{background:#0d141d;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .pay .box h4{margin-bottom:8px}
+  .pay code{display:block;background:#060a10;border:1px solid var(--line);border-radius:8px;padding:12px;font-size:13.5px;word-break:break-all;color:var(--acc2);margin-top:8px}
+  .pay p,.pay ol{color:var(--mut);font-size:15px}
+  .pay ol{margin:10px 0 0 20px}
+  .warn{background:#2a1608;border:1px solid #7a4a12;border-radius:10px;padding:14px 18px;font-size:14px;color:#ffcf8a;margin-top:18px}
+  footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:14px;text-align:center}
+  footer a{color:var(--acc2);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="logo">Teardown<span>Pro</span></div>
+  <a class="btn" href="#order">Get my teardown — $149</a>
+</header>
+
+<div class="hero">
+  <div class="kicker">For SaaS founders only</div>
+  <h1>Your landing page is <em>leaking signups.</em><br>I'll show you exactly where.</h1>
+  <p class="sub">A productized, no-call landing page teardown: written report + video walkthrough, scored section by section, with your above-the-fold rewritten. Delivered in 48 hours.</p>
+  <div class="cta-row">
+    <a class="btn" href="#order">Order teardown — $149</a>
+    <a class="btn ghost" href="#samples">See 2 real samples</a>
+  </div>
+  <p class="micro"><b>48-hour delivery</b> · Fixed price · No sales call · Money-back if I miss the deadline</p>
+</div>
+
+<section id="what">
+  <h2><span class="n">01.</span> What you get</h2>
+  <p class="lede">Not a generic "AI audit". A human teardown by someone who reads SaaS landing pages all day — scored, prioritized, and actionable.</p>
+  <div class="grid">
+    <div class="card"><h3><span class="e">🎯</span>Section-by-section scoring</h3><p>Hero, CTA, trust signals, pricing, FAQ — each scored 1–10 with the exact reason. You see what's broken before I tell you how to fix it.</p></div>
+    <div class="card"><h3><span class="e">🎬</span>Video walkthrough</h3><p>A recorded screen walkthrough (15–25 min) where I go through your page like a first-time visitor — pausing at every moment of confusion or friction.</p></div>
+    <div class="card"><h3><span class="e">✍️</span>Above-the-fold rewrite</h3><p>I don't just point at problems. I rewrite your headline, subheadline, and primary CTA so you can ship the fix the same day.</p></div>
+    <div class="card"><h3><span class="e">📋</span>Prioritized fix list</h3><p>Every issue ranked by expected conversion impact. Do the top 3 first and you'll capture most of the upside — I tell you which 3.</p></div>
+  </div>
+</section>
+
+<section id="samples">
+  <h2><span class="n">02.</span> Two real sample teardowns</h2>
+  <p class="lede">Not fictional demos. I tore down two live SaaS landing pages so you can judge the quality before you pay. (Shared as fair commentary — if either founder wants their page featured or removed, just ask.)</p>
+
+  <div class="teardown">
+    <div class="t-head"><h3>Sample A — LaunchFast</h3><span class="score"><b>Overall 6.2</b>/10</span></div>
+    <p class="t-url">SaaS starter kit (Astro / Next.js / SvelteKit) · <a href="https://www.launchfa.st/" target="_blank" rel="noopener">launchfa.st</a> · Founder publicly reported ~1,500 visitors → 6 sales in 3 weeks. Classic "traffic but no conversion" case.</p>
+    <div class="scores">
+      <span class="score">Copy clarity <b>7</b>/10</span>
+      <span class="score">CTA strength <b>6</b>/10</span>
+      <span class="score">Trust signals <b>5</b>/10</span>
+      <span class="score">Friction <b>6</b>/10</span>
+    </div>
+    <div class="finding"><h4>1. The logo wall is a firehose, not proof (Trust)</h4><p>~60 integration logos in the hero zone. Visitors scan, nobody reads. Cut to the 6–8 names your buyer already trusts (Stripe, Supabase, Vercel…) and move the rest to a docs page. More logos ≠ more trust.</p></div>
+    <div class="finding"><h4>2. "Save 48" — 48 what? (Copy clarity)</h4><p>The pricing pitch says pick one framework for $49 "or grab all three for $99 and save 48". Missing the dollar sign makes a smart buyer pause — and pausing kills momentum at the buy moment.</p></div>
+    <div class="finding"><h4>3. The AI objection is raised, not crushed (CTA)</h4><p>A whole section compares "Prompt it with AI: 2–4 weeks, $200+ in tool spend" vs LaunchFast. It legitimizes the alternative (just use AI) without a killer differentiator above it. Lead with the one thing AI can't give you: battle-tested webhooks and auth edge cases.</p></div>
+    <div class="finding fix"><h4>✍️ Suggested rewrite (above the fold)</h4><p>Headline: "Ship your SaaS this week — auth, billing and infra already wired." Subhead: "LaunchFast is a production-ready starter kit for Astro, Next.js and SvelteKit. Clone it, connect your providers, deploy. One payment, yours forever." CTA: "Get the starter kit — $49".</p></div>
+    <p class="note">Scores and notes are my own assessment from a public visit on Oct 9, 2026. Not affiliated with LaunchFast.</p>
+  </div>
+
+  <div class="teardown">
+    <div class="t-head"><h3>Sample B — Refine AI</h3><span class="score"><b>Overall 6.5</b>/10</span></div>
+    <p class="t-url">AI-visibility (GEO) tracking SaaS · <a href="https://getrefine.ai" target="_blank" rel="noopener">getrefine.ai</a> · Strong concept, strong hero — but the page hides the price and asks for a call.</p>
+    <div class="scores">
+      <span class="score">Copy clarity <b>8</b>/10</span>
+      <span class="score">CTA strength <b>6</b>/10</span>
+      <span class="score">Trust signals <b>5</b>/10</span>
+      <span class="score">Friction <b>6</b>/10</span>
+    </div>
+    <div class="finding"><h4>1. "Trusted by brands and agencies" — which ones? (Trust)</h4><p>The social-proof heading names nobody. For a tool that sells visibility, invisible customers are a contradiction. Even 3 named logos or one quoted result ("mentions up 40% in 30 days") would 10x this section.</p></div>
+    <div class="finding"><h4>2. No prices on the pricing decision (Friction)</h4><p>Plans are named (Visibility / Autopilot / Scale) with "7-day free trial" but no dollar figures on the landing page itself — while the Scale tier pushes "Book A Demo". Every extra step before the trial costs you the impatient buyer. Publish the numbers.</p></div>
+    <div class="finding"><h4>3. Three CTAs compete in one viewport (CTA)</h4><p>"Get Started", "Get Started" again, "Book A Demo" — the visitor has to decide which door is theirs before they've decided they want in. One primary CTA ("Start free trial"), demo as a quiet secondary link.</p></div>
+    <div class="finding fix"><h4>✍️ Suggested rewrite (above the fold)</h4><p>Keep the headline — "Your clients speak to ChatGPT. Make sure it recommends you." is excellent. Subhead: "Refine tracks your brand across ChatGPT, Claude, Gemini and Perplexity, shows where competitors get cited instead of you, and writes the content that wins the mention. First report in 24 hours — free for 7 days." CTA: "See my AI visibility — free".</p></div>
+    <p class="note">Scores and notes are my own assessment from a public visit on Oct 9, 2026. Not affiliated with Refine AI.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2><span class="n">03.</span> Pricing</h2>
+  <p class="lede">One price, no tiers of confusion. Pay once, get the full teardown.</p>
+  <div class="price-grid">
+    <div class="price">
+      <div class="amount">$149</div>
+      <div class="per">one-time · single teardown</div>
+      <ul>
+        <li>Written report (scored, prioritized)</li>
+        <li>15–25 min video walkthrough</li>
+        <li>Above-the-fold rewrite included</li>
+        <li>48-hour delivery, guaranteed</li>
+        <li>1 revision round</li>
+      </ul>
+      <a class="btn ghost" href="#order">Order single</a>
+    </div>
+    <div class="price hot">
+      <div class="tag">Best value</div>
+      <div class="amount">$399</div>
+      <div class="per">one-time · pack of 3 teardowns (save $48)</div>
+      <ul>
+        <li>Everything in the single teardown ×3</li>
+        <li>Use for 3 pages — or A/B variants</li>
+        <li>Compare-before/after on re-teardown</li>
+        <li>Priority queue (36-hour delivery)</li>
+        <li>Valid 6 months</li>
+      </ul>
+      <a class="btn" href="#order">Order pack of 3</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2><span class="n">04.</span> FAQ</h2>
+  <div class="faq-item"><h4>Do I need to get on a call?</h4><p>No. Send your URL + your one goal (signups, trials, demos). Everything is async. If you want a call afterward to discuss the findings, we can arrange one.</p></div>
+  <div class="faq-item"><h4>What do you need from me?</h4><p>Your landing page URL, your conversion goal, and who the page is for. That's it. The more context (traffic source, current conversion rate), the sharper the teardown.</p></div>
+  <div class="faq-item"><h4>Is this just an AI-generated report?</h4><p>No. Analysis is done by a human who reads SaaS pages for a living. The samples above are the actual quality bar — judge for yourself before paying.</p></div>
+  <div class="faq-item"><h4>What if you miss the 48-hour deadline?</h4><p>You get a full refund, and you still keep whatever was delivered. The deadline is the promise.</p></div>
+  <div class="faq-item"><h4>Do you implement the fixes?</h4><p>The teardown includes the above-the-fold rewrite so your team can ship fast. Full implementation is a separate engagement — ask after your teardown.</p></div>
+  <div class="faq-item"><h4>Who is behind TeardownPro?</h4><p>I'm Chachi — I build and tear down landing pages for SaaS founders. One person, no agency overhead, which is why the price is what it is.</p></div>
+</section>
+
+<section id="order">
+  <h2><span class="n">05.</span> Order</h2>
+  <p class="lede">Two steps. Takes two minutes.</p>
+  <div class="pay">
+    <h3>How to order</h3>
+    <ol>
+      <li><strong>Email your URL</strong> to <a href="mailto:chachiafk@gmail.com">chachiafk@gmail.com</a> with subject <code style="display:inline;padding:4px 8px">TEARDOWN — yoursite.com</code> — include your page URL, your goal (signups / trials / demos), and who the page is for.</li>
+      <li><strong>Pay $149 (single) or $399 (pack of 3)</strong> with either method below. Put your site URL in the payment note.</li>
+      <li>Your teardown lands in your inbox <strong>within 48 hours</strong> — written report + video.</li>
+    </ol>
+    <div class="row">
+      <div class="box">
+        <h4>💳 PayPal</h4>
+        <p>Send to:</p>
+        <code>chachiafk@gmail.com</code>
+      </div>
+      <div class="box">
+        <h4>🪙 USDT — BSC network only</h4>
+        <p>Send USDT (BEP-20) to:</p>
+        <code>0xb2a38e074808f0c0d4ee9c13f5894c6c601fb172</code>
+      </div>
+    </div>
+    <div class="warn">⚠️ USDT payments: <strong>BNB Smart Chain (BSC / BEP-20) only.</strong> Sending on any other network (ERC-20, TRC-20, etc.) may lose your funds permanently — I cannot recover them.</div>
+  </div>
+</section>
+
+<footer>
+  <p>TeardownPro · run by <strong>Chachi</strong> · <a href="mailto:chachiafk@gmail.com">chachiafk@gmail.com</a></p>
+  <p style="margin-top:8px">Sample teardowns are independent commentary on public pages, not endorsements or affiliations.</p>
+</footer>
+
+</div>
+</body>
+</html>
